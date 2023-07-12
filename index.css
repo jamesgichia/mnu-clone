@@ -1,0 +1,271 @@
+/* ***********CSS VARIABLES*********** */
+:root {
+  --colorBlue: rgb(38, 38, 183);
+  --colorOrange: rgb(254, 145, 56, 0.968);
+  --colorGrey: grey;
+  --colorDarkgrey: rgb(56, 54, 54);
+}
+
+/************ CSS RESET*********** */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Generals styles for the body */
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #ffffff;
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
+/* ********Styles for the header part of the web page*************** */
+
+/* **First Part Of The Header** */
+header section:nth-child(1) {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--colorOrange);
+  min-height: 8vh;
+  padding: 0 2em;
+}
+
+header .spans {
+  display: flex;
+}
+header .first {
+  margin: 0 1em 0;
+}
+
+header .social i {
+  margin: 0 1em 0;
+}
+
+/* ** Second Part Of The Header ** */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 15vh;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 2px grey;
+  padding: 0 2em;
+  position: sticky;
+  background-color: #ffffff;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+}
+.identity img {
+  height: 10vh;
+  width: 10vh;
+}
+.identity h1,
+.identity h2 {
+  color: var(--colorBlue);
+  text-shadow: 1px 1px 1px var(--colorBlue);
+}
+.identity h1 {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.navbar-list {
+  display: flex;
+}
+.navbar-list li {
+  list-style-type: none;
+  margin-right: 2.5em;
+  font-weight: bolder;
+}
+.navbar-list li:hover,
+:active {
+  color: var(--colorGrey);
+}
+
+/* ****** MAIN PART STYLES ****** */
+
+/* **Sliding Gallery** */
+
+.slider-container {
+  margin: 0 1em 2em;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.slider-container figure {
+  position: relative;
+  width: 600%;
+  margin: 0;
+  display: flex;
+  left: 2px;
+  animation: 20s slider infinite;
+}
+
+.slider-container figure img {
+  width: 16.66%;
+  display: block;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  17% {
+    left: 0;
+  }
+  20% {
+    left: -100%;
+  }
+  37% {
+    left: -100%;
+  }
+  40% {
+    left: -200%;
+  }
+  57% {
+    left: -200%;
+  }
+  60% {
+    left: -300%;
+  }
+  77% {
+    left: -300%;
+  }
+  80% {
+    left: -400%;
+  }
+  97% {
+    left: -400%;
+  }
+  100% {
+    left: -500%;
+  }
+}
+
+/* ***SMALL ABOUT SECTION*** */
+.about-section {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section img {
+  width: 80%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.43rem;
+  font-weight: 520;
+}
+
+.about-content h1 {
+  color: var(--colorDarkgrey);
+  font-size: 3rem;
+}
+
+.about-content p {
+  padding: 0 12em;
+  text-align: center;
+}
+
+.why {
+  display: flex;
+  margin-top: 3.2rem;
+}
+
+.why-content {
+  width: 110ch;
+  font-size: 1.1rem;
+}
+
+.why-content h1 {
+  color: var(--colorDarkgrey);
+}
+
+.why-image {
+  display: flex;
+  justify-content: end;
+}
+
+/* ***NOTICE BOARD***** */
+.notice-board {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 3em 1em;
+}
+
+.notice-board-table {
+  display: flex;
+  margin: 1rem 0;
+  align-items: start;
+  flex-direction: column;
+}
+
+.notice-board table {
+  display: table;
+  border: 2px solid var(--colorGrey);
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.notice-board table tr,
+.notice-board table th,
+.notice-board table td {
+  border: 1.5px solid var(--colorGrey);
+}
+
+.notice-board th {
+  font-weight: bolder;
+  text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+.notice-board td {
+  padding: 0.7rem 2rem;
+}
+
+.notice-board tr td:nth-child(4) {
+  color: var(--colorOrange);
+  cursor: pointer;
+}
+
+/* ***DETAILS SECTION**** */
+.details {
+  background-color: rgb(240, 233, 233);
+  font-size: 1.3rem;
+  padding: 2em 4em;
+  display: flex;
+  justify-content: space-between;
+}
+.details li {
+  list-style-type: none;
+  color: var(--colorOrange);
+  margin: 1em;
+  font-weight: bolder;
+}
+
+.details div:nth-child(2) li {
+  background-color: #ffffff;
+  padding: 0.5em;
+  height: 3rem;
+  font-size: x-large;
+}
